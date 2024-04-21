@@ -2,13 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def index(request):
-    return  HttpResponse('''<!DOCTYPE html>
-<html>
-<body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+def Index(request):
+    return  render(request ,'index.html')
 
-</body>
-</html>''')
+
+def Login(request):
+    return  render(request ,'auth/login.html')
+
+def Register(request):
+    return  render(request ,'auth/register.html')
